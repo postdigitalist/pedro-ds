@@ -1,6 +1,19 @@
 @tailwind base;
 @tailwind components;
 
+/* Font import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+*{
+    font-family: 'Inter', sans-serif;
+}
+/* Headings */
+h1, .h1{
+    @apply text-3xl font-semibold tracking-tight mb-8 text-black-80;
+}
+h2, .h2{
+    @apply text-2xl font-semibold tracking-tight mb-4 text-black-70;
+}
+/* Buttons */
 .primaryButton{
     @apply bg-blue-50 py-2 px-4 text-blue-10 rounded-md shadow-md hover:bg-black-80 flex items-center justify-start max-w-fit font-medium; 
 }
@@ -15,7 +28,36 @@
 a{
     @apply font-medium text-blue-50 underline underline-offset-2 hover:text-black-80 hover:underline-offset-0;
 }
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
-*{
-    font-family: 'Inter', sans-serif;
+.disabledButton{
+    @apply text-black-30 bg-black-10 hover:text-black-40 hover:bg-black-15 hover:border-black-20;
 }
+/* Tags */
+.tagGreen{
+    @apply max-w-fit px-4 py-1 text-sm rounded-md bg-green-10 text-green-60 flex items-center justify-between;
+}
+.tagOrange{
+    @apply max-w-fit px-4 py-1 text-sm rounded-md bg-orange-10 text-orange-60 flex items-center justify-between;
+}
+.tagRed{
+    @apply max-w-fit px-4 py-1 text-sm rounded-md bg-red-10 text-red-60 flex items-center justify-between;
+}
+.tagBlue{
+    @apply max-w-fit px-4 py-1 text-sm rounded-md bg-blue-10 text-blue-60 flex items-center justify-between;
+}
+.tagGray{
+    @apply max-w-fit px-4 py-1 text-sm rounded-md bg-black-00 text-black-60 flex items-center justify-between;
+}
+/* Lists */
+ol, ul{
+    @apply list-inside  text-black-80;
+}
+li{
+    @apply border-b border-black-00;
+}
+ul{
+    @apply list-disc;
+}
+ol{
+    @apply list-decimal
+}
+@tailwind utilities;
