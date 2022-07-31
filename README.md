@@ -5,5 +5,6 @@ Pedro es un sistema de diseño open-source creado para [RedGayLatino](https://ww
 ## Por qué un sistema de diseño
 
 ## Enlaces importantes
+[Showcase de componentes]()
 [Documentación]()
-[Manifiesto]()
+[Repositorio de la platforma de financiamiento de RedGay]()

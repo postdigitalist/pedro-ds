@@ -13,6 +13,9 @@ h1, .h1{
 h2, .h2{
     @apply text-2xl font-semibold tracking-tight mb-4 text-black-70;
 }
+h3, .h3{
+    @apply text-xl tracking-tight text-black-70;
+}
 /* Buttons */
 .primaryButton{
     @apply bg-blue-50 py-2 px-4 text-blue-10 rounded-md shadow-md hover:bg-black-80 flex items-center justify-start max-w-fit font-medium; 
@@ -59,5 +62,23 @@ ul{
 }
 ol{
     @apply list-decimal
+}
+table{
+    @apply w-96 bg-black-00 py-3 drop-shadow-md rounded-lg text-left w-3/6;
+}
+tr{
+    @apply py-2 border-b border-black-20 ;
+}
+th{
+    @apply font-normal text-black-40  text-sm; 
+}
+th,td{
+    @apply px-8 py-4 min-w-fit;
+}
+td{
+    @apply text-black-60;
+}
+tr:last-of-type{
+    @apply border-none;
 }
 @tailwind utilities;
