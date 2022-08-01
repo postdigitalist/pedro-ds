@@ -2,6 +2,7 @@ import { PlusCircle, Trash, MoreHorizontal, X, Info } from "react-feather";
 import { RoundedIcon, SquareIcon } from "./components/UserIcons";
 import Breadcrumbs from "./components/Breadcrumbs";
 import AcordionTabs from "./components/Acordion";
+import {ProgressBar12, ProgressBar24, ProgressBar36, ProgressBar48, ProgressBar56, ProgressBar72, ProgressBar92, ProgressBar120, ProgressBar242, ProgressBarFull} from "./components/Progress";
 function App() {
   return (
     <div className="App bg-black-10 p-14">
@@ -184,6 +185,58 @@ podremos acompañarte con material de ayuda personalizado.
         <div className="tagBlue">Gran proyecto</div>
         </div>
         </div>
+        <h2>Formulario</h2>
+        <hr className="border-black-20 mb-6"/>
+      <div className="mb-12">
+        <div className="mb-4">
+          <label for="input1" className="block mb-1  text-black-70">
+            Nombre*
+          </label>
+          <input type="text" className="border-2 border-black-15 text-blue-50 rounded-lg p-1"/>
+        </div>
+        <div className="mb-4">
+          <label for="input1" className="block mb-1  text-black-70">
+            Nombre*
+          </label>
+          <input type="text" className="border-2 border-red-50 rounded-lg p-1"/>
+          <span className="block text-sm text-red-50 mt-1">Recordá completar este campo.</span>
+        </div>
+        </div>
+        <h2>Progreso</h2>
+        <hr className="border-black-20 mb-6"/>
+      <div className="mb-12">
+       <div className="mb-4">
+       <ProgressBar12/>
+       </div>
+       <div className="mb-4">
+       <ProgressBar24/>
+       </div>
+       <div className="mb-4">
+       <ProgressBar36/>
+       </div>
+       <div className="mb-4">
+       <ProgressBar48/>
+       </div>
+       <div className="mb-4">
+       <ProgressBar56/>
+       </div>
+       <div className="mb-4">
+       <ProgressBar72/>
+       </div>
+       <div className="mb-4">
+       <ProgressBar92/>
+       </div>
+       <div className="mb-4">
+       <ProgressBar120/>
+       </div>
+       <div className="mb-4">
+       <ProgressBar242/>
+       </div>
+       <div className="mb-4">
+       <ProgressBarFull/>
+       </div>
+        </div>
+        
     </div>
   );
 }
