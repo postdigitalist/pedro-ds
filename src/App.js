@@ -9,39 +9,39 @@ function App() {
       <h1>Librería de componentes</h1>
       <h2>Botones</h2>
       <hr className="border-black-20 mb-6"/>
-      <div className="grid grid-cols-3 gap-4 justify-center items-center mb-12">
-     <button className="primaryButton">
+      <div className="lg:grid lg:grid-cols-3 lg:gap-4 lg:justify-center lg:items-center mb-12">
+     <button className="primaryButton my-4">
       Comienza ahora
      </button>
-     <button className="primaryButton buttonSM">
+     <button className="primaryButton buttonSM my-4 lg:my-0">
       Postula un nuevo proyecto
      </button>
-     <button className="primaryButton buttonSM">
+     <button className="primaryButton buttonSM my-4 lg:my-0">
       <PlusCircle className="mr-1 w-4"/>
       Postula un nuevo proyecto
      </button>
-     <button className="secondaryButton">
+     <button className="secondaryButton my-4 lg:my-0">
       Revisa la documentación
      </button>
-     <button className="secondaryButton buttonSM">
+     <button className="secondaryButton buttonSM my-4 lg:my-0">
    Invita a tus amigues
      </button>
-     <button className="secondaryButton buttonSM">
+     <button className="secondaryButton buttonSM my-4 lg:my-0">
       <Trash className="mr-1 w-4"/>Elimina el borrador
      </button>
      <a href="#">Comienza ahora</a>
-     <a href="#" className="no-underline">Aprende más <span className="text-sm">↗</span></a>
-     <a href="#" className="no-underline">Volver</a>
-     <button className="secondaryButton squareButton">
+     <a href="#" className="no-underline ml-4 lg:ml-0">Aprende más <span className="text-sm">↗</span></a>
+     <a href="#" className="no-underline ml-4 lg:ml-0">Volver</a>
+     <button className="secondaryButton squareButton my-4 lg:my-0">
       <MoreHorizontal/>
      </button>
-     <button className="primaryButton squareButton">
+     <button className="primaryButton squareButton my-4 lg:my-0">
       <MoreHorizontal/>
      </button>
-     <button className="secondaryButton disabledButton">
+     <button className="secondaryButton disabledButton my-4 lg:my-0">
       Revisa la documentación
      </button>
-     <button className="primaryButton disabledButton">
+     <button className="primaryButton disabledButton my-4 lg:my-0">
       Comienza ahora
      </button>
      <button className="primaryButton squareButton disabledButton">
@@ -65,7 +65,7 @@ function App() {
       </div>
       <h2>Listas</h2>
       <hr className="border-black-20 mb-6"/>
-      <div className="grid grid-cols-3 gap-4 justify-center items-center mb-12">
+      <div className="grid grid-cols-2 gap-4 justify-center items-center mb-12">
         <ul>
           <li>Buen día</li>
           <li>Buenas tardes</li>
@@ -100,8 +100,8 @@ function App() {
           </div>
           <h2>Modals & toasts</h2>
       <hr className="border-black-20 mb-6"/>
-      <div className="grid grid-cols-3 gap-4 justify-center items-center mb-12">
-        <div className="bg-black-00  grid grid-cols-4 rounded-lg border border-black-00 shadow-md">
+      <div className="lg:grid lg:grid-cols-3 lg:gap-4 lg:justify-center lg:items-center mb-12">
+        <div className="bg-black-00  grid grid-cols-4 rounded-lg border border-black-00 shadow-md my-4 lg:my-0">
           <div className="col-span-3 p-6 pr-4">
           <h4>¡Cuidado!</h4>
           <p className="text-black-60 mt-2 text-sm">
@@ -118,7 +118,7 @@ Esto se puede revertir únicamente si vuelves a postular el proyecto.
             </button>
           </div>
         </div>
-        <div className="bg-black-00 rounded-lg border border-black-00 shadow-md p-6">
+        <div className="bg-black-00 rounded-lg border border-black-00 shadow-md p-6 my-4 lg:my-0">
          <div className="flex  items-center">
          <Info className="text-blue-50 mr-2"/>
          <h4>Presupuesto total</h4>
@@ -128,7 +128,7 @@ Esto se puede revertir únicamente si vuelves a postular el proyecto.
           </p>
         </div>
         <div className="bg-black-00 rounded-2xl border border-black-00 shadow-md p-6 col-span-2">
-          <div className="flex justify-between">
+          <div className="flex justify-between flex-col-reverse lg:flex-row gap-2">
           <Breadcrumbs/>
           <X className="w-6 text-black-60"/>
           </div>
