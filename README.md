@@ -24,6 +24,6 @@ Los productos que se desarrollen con Pedro deben ser:
 - Nuestro sistema de diseño en Figma fue construido sobre [Disy](https://www.disy.design/). Si querés una referencia sobre cómo diseñar un elemento que todavía no existe, de una forma consistente con el resto del sistema, [echale un ojo a Disy](https://www.figma.com/file/usqAh1FfAVsiGIbSKUKyQ7/Disy-%E2%80%94-Preview-1.1?node-id=317%3A3322).
 
 ## Enlaces importantes
-[Showcase de componentes](https://pedro-ds.vercel.app)
-[Documentación](https://postdigitalist.notion.site/Pedro-Sistema-de-Dise-o-21d434165f224508b8ea349522a352e0)
-[Repositorio de la platforma de financiamiento de RedGay]()
+- [Showcase de componentes](https://pedro-ds.vercel.app)
+- [Documentación](https://postdigitalist.notion.site/Pedro-Sistema-de-Dise-o-21d434165f224508b8ea349522a352e0)
+- [Repositorio de la platforma de financiamiento de RedGay]()
