@@ -5,9 +5,14 @@ import Tabs from "./components/Tabs";
 import {ProgressBar12, ProgressBar24, ProgressBar36, ProgressBar48, ProgressBar56, ProgressBar72, ProgressBar92, ProgressBar120, ProgressBar242, ProgressBarFull} from "./components/Progress";
 import {SavingProgress, SavedProgress, GenericWheel} from "./components/Loaders";
 import Dropdown from "./components/Dropdown";
+import NavHorizontal from "./components/NavHorizontal";
+import NavVertical from "./components/NavVertical";
 function App() {
   return (
-    <div className="App bg-black-10 p-14">
+    <div className="App bg-black-10  grid grid-cols-5">
+            <NavVertical/>
+            <div className="col-span-4 px-16">
+      <NavHorizontal/>
       <h1>Librería de componentes</h1>
       <h2>Botones</h2>
       <hr className="border-black-20 mb-6"/>
@@ -249,6 +254,7 @@ podremos acompañarte con material de ayuda personalizado.
         <hr className="border-black-20 mb-6"/>
       <div className="mb-12">
         <Dropdown/>
+        </div>
         </div>
     </div>
   );

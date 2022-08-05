@@ -1,27 +1,23 @@
 import React from "react";
 
-function RoundedIcon(props) {
+const Icon = ({ imageUrl, className }) => {
   return (
     <div
     className="w-8 h-8 rounded-full"
       style={{
         
-        backgroundImage: `url(${props.imageUrl})`,
-        backgroundSize: "cover",
+        backgroundImage: `url(${imageUrl})`,
+        backgroundSize: "contain",
       }}
     ></div>
   );
 }
+function RoundedIcon({ imageUrl, className }) {
+  return <Icon className={`${className} rounded-full`}/>;
+}
 
-const SquareIcon = (props) => {
-  return (
-    <div className="rounded-sm w-12 h-12"
-      style={{
-        backgroundImage: `url(${props.imageUrl})`,
-        backgroundSize: "cover",
-      }}
-    ></div>
-  );
-};
+function SquareIcon({ imageUrl, className }) {
+  return <Icon className={`${className} rounded-sm`}/>;
+}
 
 export { RoundedIcon, SquareIcon };
