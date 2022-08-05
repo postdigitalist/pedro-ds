@@ -1,8 +1,10 @@
 import { PlusCircle, Trash, MoreHorizontal, X, Info } from "react-feather";
 import { RoundedIcon, SquareIcon } from "./components/UserIcons";
 import Breadcrumbs from "./components/Breadcrumbs";
-import AcordionTabs from "./components/Acordion";
+import Tabs from "./components/Tabs";
 import {ProgressBar12, ProgressBar24, ProgressBar36, ProgressBar48, ProgressBar56, ProgressBar72, ProgressBar92, ProgressBar120, ProgressBar242, ProgressBarFull} from "./components/Progress";
+import {SavingProgress, SavedProgress, GenericWheel} from "./components/Loaders";
+import Dropdown from "./components/Dropdown";
 function App() {
   return (
     <div className="App bg-black-10 p-14">
@@ -150,7 +152,7 @@ Esto se puede revertir únicamente si vuelves a postular el proyecto.
         <h2>Tabs</h2>
         <hr className="border-black-20 mb-6"/>
       <div className="mb-12">
-        <AcordionTabs/>
+        <Tabs/>
         <table className="m-auto">
   <tr>
     <th>Company</th>
@@ -236,7 +238,18 @@ podremos acompañarte con material de ayuda personalizado.
        <ProgressBarFull/>
        </div>
         </div>
-        
+        <h2>Indicadores de carga</h2>
+        <hr className="border-black-20 mb-6"/>
+      <div className="mb-12">
+        <SavingProgress content="Tu progreso se está guardando"/>
+        <SavedProgress content="Tu progreso fue guardado por última vez a las 11:15"/>
+        <GenericWheel/>
+        </div>
+        <h2>Dropdown</h2>
+        <hr className="border-black-20 mb-6"/>
+      <div className="mb-12">
+        <Dropdown/>
+        </div>
     </div>
   );
 }

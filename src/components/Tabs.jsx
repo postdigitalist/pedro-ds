@@ -1,6 +1,6 @@
 import React from "react";
 
-const AcordionTabs = (props) =>{
+const Tabs = (props) =>{
     return(
         <div className="flex flex-col items-center">
         <div className="mb-4 text-sm text-black-60 font-normal bg-black-00 rounded-xl flex items-center p-2 max-w-fit">
@@ -8,7 +8,10 @@ const AcordionTabs = (props) =>{
         <div className="p-3 rounded-lg mr-4 hover:shadow-sm hover:text-black-80 hover:font-semibold hover:rounded-lg cursor-pointer">Equipo</div>
         <div className="p-3 rounded-lg hover:shadow-sm hover:text-black-80 hover:font-semibold hover:rounded-lg cursor-pointer">Presupuesto</div>
         </div>
+        <div>
+            <h1>Tab</h1>
+        </div>
         </div>
     )
 }
-export default AcordionTabs
+export default Tabs
