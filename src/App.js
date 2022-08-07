@@ -6,12 +6,13 @@ import {ProgressBar12, ProgressBar24, ProgressBar36, ProgressBar48, ProgressBar5
 import {SavingProgress, SavedProgress, GenericWheel} from "./components/Loaders";
 import Dropdown from "./components/Dropdown";
 import NavHorizontal from "./components/NavHorizontal";
-import NavVertical from "./components/NavVertical";
+import {NavVerticalDesktop, NavVerticalMobile} from "./components/NavVertical";
 function App() {
   return (
-    <div className="App bg-black-10  grid grid-cols-5">
-            <NavVertical/>
-            <div className="col-span-4 px-16">
+    <div className="App bg-black-10  lg:grid lg:grid-cols-6">
+            <NavVerticalDesktop/>
+            <NavVerticalMobile/>
+            <div className="lg:col-span-5 lg:px-16 px-6">
       <NavHorizontal/>
       <h1>Librería de componentes</h1>
       <h2>Botones</h2>
@@ -158,23 +159,6 @@ Esto se puede revertir únicamente si vuelves a postular el proyecto.
         <hr className="border-black-20 mb-6"/>
       <div className="mb-12">
         <Tabs/>
-        <table className="m-auto">
-  <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-</table>
         
         </div>
         <h2>Task</h2>
