@@ -2,17 +2,18 @@ import { PlusCircle, Trash, MoreHorizontal, X, Info } from "react-feather";
 import { RoundedIcon, SquareIcon } from "./components/UserIcons";
 import Breadcrumbs from "./components/Breadcrumbs";
 import Tabs from "./components/Tabs";
-import {ProgressBar12, ProgressBar24, ProgressBar36, ProgressBar48, ProgressBar56, ProgressBar72, ProgressBar92, ProgressBar120, ProgressBar242, ProgressBarFull} from "./components/Progress";
+import ProgressBar from "./components/Progress";
 import {SavingProgress, SavedProgress, GenericWheel} from "./components/Loaders";
 import Dropdown from "./components/Dropdown";
 import NavHorizontal from "./components/NavHorizontal";
 import {NavVerticalDesktop, NavVerticalMobile} from "./components/NavVertical";
+import {RadioField,CheckboxField} from "./components/RadiosCheckboxes";
 function App() {
   return (
-    <div className="App bg-black-10  lg:grid lg:grid-cols-6">
+    <div className="App bg-black-10  lg:grid lg:grid-cols-5">
             <NavVerticalDesktop/>
             <NavVerticalMobile/>
-            <div className="lg:col-span-5 lg:px-16 px-6">
+            <div className="lg:col-span-4 lg:px-16 px-6">
       <NavHorizontal/>
       <h1>Librería de componentes</h1>
       <h2>Botones</h2>
@@ -176,7 +177,7 @@ podremos acompañarte con material de ayuda personalizado.
         <div className="tagBlue">Gran proyecto</div>
         </div>
         </div>
-        <h2>Formulario</h2>
+        <h2>Inputs</h2>
         <hr className="border-black-20 mb-6"/>
       <div className="mb-12">
         <div className="mb-4">
@@ -192,39 +193,29 @@ podremos acompañarte con material de ayuda personalizado.
           <input type="text" className="border-2 border-red-50 rounded-lg p-1"/>
           <span className="block text-sm text-red-50 mt-1">Recordá completar este campo.</span>
         </div>
+        <RadioField label="No posee" id="RadioExample"/>
+        <CheckboxField label="Acepto los términos y condiciones" id="CheckboxExample"/>
         </div>
         <h2>Progreso</h2>
         <hr className="border-black-20 mb-6"/>
       <div className="mb-12">
        <div className="mb-4">
-       <ProgressBar12/>
+       <ProgressBar progress="w-full"/>
        </div>
        <div className="mb-4">
-       <ProgressBar24/>
+       <ProgressBar progress="w-[80%]"/>
        </div>
        <div className="mb-4">
-       <ProgressBar36/>
+       <ProgressBar progress="w-24"/>
        </div>
        <div className="mb-4">
-       <ProgressBar48/>
+       <ProgressBar progress="w-12"/>
        </div>
        <div className="mb-4">
-       <ProgressBar56/>
+       <ProgressBar progress="w-34"/>
        </div>
        <div className="mb-4">
-       <ProgressBar72/>
-       </div>
-       <div className="mb-4">
-       <ProgressBar92/>
-       </div>
-       <div className="mb-4">
-       <ProgressBar120/>
-       </div>
-       <div className="mb-4">
-       <ProgressBar242/>
-       </div>
-       <div className="mb-4">
-       <ProgressBarFull/>
+       <ProgressBar progress="w-[50%]"/>
        </div>
         </div>
         <h2>Indicadores de carga</h2>
@@ -241,6 +232,7 @@ podremos acompañarte con material de ayuda personalizado.
         </div>
         </div>
     </div>
+
   );
 }
 

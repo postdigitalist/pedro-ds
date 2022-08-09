@@ -25,7 +25,7 @@ const MenuItems = (props) =>{
 
 const NavVerticalDesktop = (props) =>{
     return(
-        <nav className="col-span-1 h-full w-[95%] py-8 bg-black-00 top-0 left-0 z-10 hidden lg:block">
+        <nav className="col-span-1 h-full w-[100%] py-8 bg-black-00 top-0 left-0 z-10 hidden lg:block">
            <div className="fixed flex flex-col justify-between w-72 h-[92%]"><div>
                 <div className="flex items-center justify-between pl-12">
                 <img src="logo.png" className="w-6"/>
