@@ -101,7 +101,7 @@ function App() {
         </div>
         <h2>Tablas</h2>
         <hr className="border-black-20 mb-6" />
-        <div className=" mb-12">
+        <div className=" mb-12 overflow-x-auto">
           <table>
             <tr>
               <th>Company</th>
@@ -234,7 +234,7 @@ function App() {
             </label>
             <input
               type="text"
-              className="border-2 border-black-15 text-blue-50 rounded-lg p-1"
+              className="border-2 border-black-15 text-blue-50 rounded-lg p-1 max-w-full"
             />
           </div>
           <div className="mb-4">
@@ -243,7 +243,7 @@ function App() {
             </label>
             <input
               type="text"
-              className="border-2 border-red-50 rounded-lg p-1"
+              className="border-2 border-red-50 rounded-lg p-1 max-w-full"
             />
             <span className="block text-sm text-red-50 mt-1">
               Recordá completar este campo.
