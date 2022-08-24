@@ -83,7 +83,7 @@ function App() {
         <h2>Imagenes de perfil</h2>
         <hr className="border-black-20 mb-6" />
         <div className="grid grid-cols-3 gap-4 justify-center items-center mb-12">
-          <RoundedIcon imageUrl={"https://picsum.photos/200/300"} />
+          <RoundedIcon size={20} imageUrl={"https://picsum.photos/300"} />
         </div>
         <h2>Listas</h2>
         <hr className="border-black-20 mb-6" />

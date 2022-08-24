@@ -1,23 +1,25 @@
 import React from "react";
 
-const Icon = ({ imageUrl, className }) => {
+const Icon = ({ imageUrl, className, size }) => {
   return (
     <div
-    className="w-8 h-8 rounded-full"
+      className={className}
       style={{
-        
+        height: `${size}em`,
+        width: `${size}em`,
         backgroundImage: `url(${imageUrl})`,
+        backgroundPosition: "center",
         backgroundSize: "contain",
       }}
     ></div>
   );
-}
-function RoundedIcon({ imageUrl, className }) {
-  return <Icon className={`${className} rounded-full`}/>;
+};
+function RoundedIcon({ imageUrl, size = 12 }) {
+  return <Icon imageUrl={imageUrl} size={size} className={`rounded-full`} />;
 }
 
-function SquareIcon({ imageUrl, className }) {
-  return <Icon className={`${className} rounded-sm`}/>;
+function SquareIcon({ imageUrl, size = 12 }) {
+  return <Icon imageUrl={imageUrl} size={size} className={`rounded-sm`} />;
 }
 
 export { RoundedIcon, SquareIcon };

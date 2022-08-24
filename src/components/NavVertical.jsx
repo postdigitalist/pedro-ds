@@ -44,10 +44,7 @@ const NavVerticalDesktop = (props) => {
         <div>
           <div className="flex items-center justify-between pl-12">
             <img src="logo.png" className="w-6" />
-            <RoundedIcon
-              className="h-12 w-12"
-              imageUrl="https://picsum.photos/200"
-            />
+            <RoundedIcon size={3} imageUrl="https://picsum.photos/200" />
           </div>
           <div className="pl-8">
             <MenuItems />
