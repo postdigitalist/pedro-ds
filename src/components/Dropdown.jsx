@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ChevronDown } from "react-feather";
 
-const Dropdown = ({ options }) => {
+const Dropdown = ({ title, options }) => {
   const [show, setShow] = useState(false);
   const onToggleClick = () => {
     setShow((value) => !value);
@@ -10,8 +10,10 @@ const Dropdown = ({ options }) => {
   return (
     <div>
       <div className="secondaryButton rounded-lg" onClick={onToggleClick}>
-        My options{" "}
-        <ChevronDown className="w-4 ml-1 hover:rotate-180 transition-1s" />
+        {title}
+        <ChevronDown
+          className={`w-4 ml-1 transition-1s ${show && "rotate-180"}`}
+        />
       </div>
       <div
         className={`${

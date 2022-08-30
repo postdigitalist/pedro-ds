@@ -124,6 +124,7 @@ function App() {
         <hr className="border-black-20 mb-6" />
         <div className="mb-12">
           <Dropdown
+            title={"My Options"}
             options={[
               { title: "Home", url: "https://google.com" },
               { title: "Hello, good morning", url: "https://facebook.com" },
