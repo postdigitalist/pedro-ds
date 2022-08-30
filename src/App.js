@@ -15,6 +15,8 @@ import {
   NavVerticalMobile,
 } from "./components/NavVertical";
 import { RadioField, CheckboxField } from "./components/RadiosCheckboxes";
+import Button from "./components/Button";
+import Link from "./components/Link";
 function App() {
   return (
     <div className="App bg-black-10  lg:grid lg:grid-cols-5">
@@ -26,46 +28,39 @@ function App() {
         <h2>Botones</h2>
         <hr className="border-black-20 mb-6" />
         <div className="lg:grid lg:grid-cols-3 lg:gap-4 lg:justify-center lg:items-center mb-12">
-          <button className="primaryButton my-4">Comienza ahora</button>
-          <button className="primaryButton buttonSM my-4 lg:my-0">
+          <Button primary>Comienza ahora</Button>
+          <Button primary small>
             Postula un nuevo proyecto
-          </button>
-          <button className="primaryButton buttonSM my-4 lg:my-0">
-            <PlusCircle className="mr-1 w-4" />
+          </Button>
+          <Button primary small icon={PlusCircle}>
             Postula un nuevo proyecto
-          </button>
-          <button className="secondaryButton my-4 lg:my-0">
-            Revisa la documentación
-          </button>
-          <button className="secondaryButton buttonSM my-4 lg:my-0">
+          </Button>
+          <Button secondary>Revisa la documentación</Button>
+          <Button secondary small>
             Invita a tus amigues
-          </button>
-          <button className="secondaryButton buttonSM my-4 lg:my-0">
-            <Trash className="mr-1 w-4" />
+          </Button>
+          <Button secondary small icon={Trash}>
             Elimina el borrador
-          </button>
-          <a href="#">Comienza ahora</a>
-          <a href="#" className="no-underline ml-4 lg:ml-0">
+          </Button>
+
+          <Link href="#">Comienza ahora</Link>
+          <Link noUnderline href="#">
             Aprende más <span className="text-sm">↗</span>
-          </a>
-          <a href="#" className="no-underline ml-4 lg:ml-0">
+          </Link>
+          <Link noUnderline href="#">
             Volver
-          </a>
-          <button className="secondaryButton squareButton my-4 lg:my-0">
-            <MoreHorizontal />
-          </button>
-          <button className="primaryButton squareButton my-4 lg:my-0">
-            <MoreHorizontal />
-          </button>
-          <button className="secondaryButton disabledButton my-4 lg:my-0">
+          </Link>
+
+          <Button secondary square icon={MoreHorizontal} />
+          <Button primary square icon={MoreHorizontal} />
+
+          <Button secondary disabled>
             Revisa la documentación
-          </button>
-          <button className="primaryButton disabledButton my-4 lg:my-0">
+          </Button>
+          <Button primary disabled>
             Comienza ahora
-          </button>
-          <button className="primaryButton squareButton disabledButton">
-            <MoreHorizontal />
-          </button>
+          </Button>
+          <Button primary square disabled icon={MoreHorizontal} />
         </div>
         <h2>Tags</h2>
         <hr className="border-black-20 mb-6" />
