@@ -8,6 +8,7 @@ const Button = ({
   icon,
   disabled,
   children,
+  ...rest
 }) => {
   const primaryClassName = "primaryButton";
   const secondaryClassName = "secondaryButton";
@@ -22,6 +23,7 @@ const Button = ({
       } ${small && smallClassName} ${disabled && disabledClassName} ${
         square && squareClassName
       } my-4 lg:my-0`}
+      {...rest}
     >
       {icon && <Icon className={`${children && "mr-1 w-4"}`} />}
       {children}
