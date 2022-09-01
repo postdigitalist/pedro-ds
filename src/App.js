@@ -17,6 +17,7 @@ import {
 import { RadioField, CheckboxField } from "./components/RadiosCheckboxes";
 import Button from "./components/Button";
 import Link from "./components/Link";
+import Tag from "./components/Tag";
 function App() {
   return (
     <div className="App bg-black-10  lg:grid lg:grid-cols-5">
@@ -65,15 +66,15 @@ function App() {
         <h2>Tags</h2>
         <hr className="border-black-20 mb-6" />
         <div className="grid grid-cols-3 gap-4 justify-center items-center mb-12">
-          <div className="tagBlue">Cabeza del equipo</div>
-          <div className="tagGray">Borrador</div>
-          <div className="tagOrange">En revisión</div>
-          <div className="tagGreen">Aprobado</div>
-          <div className="tagRed">Denegado</div>
-          <div className="tagBlue">
-            <X className="mr-1 w-3" />
+          <Tag color="blue">Cabeza del equipo</Tag>
+          <Tag color="blue">Cabeza del equipo</Tag>
+          <Tag color="gray">Borrador</Tag>
+          <Tag color="orange">En revisión</Tag>
+          <Tag color="green">Aprobado</Tag>
+          <Tag color="red">Denegado</Tag>
+          <Tag color="blue" icon={X}>
             Proyectos en curso
-          </div>
+          </Tag>
         </div>
         <h2>Imagenes de perfil</h2>
         <hr className="border-black-20 mb-6" />
