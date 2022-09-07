@@ -18,7 +18,21 @@ import { RadioField, CheckboxField } from "./components/RadiosCheckboxes";
 import Button from "./components/Button";
 import Link from "./components/Link";
 import Tag from "./components/Tag";
+import {
+  DecisionModal,
+  Modal,
+  ModalBody,
+  ModalHeader,
+  NoticeModal,
+} from "./components/Modals";
+import { useState } from "react";
+import Toast from "./components/Toast";
 function App() {
+  const [showDecisionModal, setShowDecisionModal] = useState(false);
+  const toggleModal = () => setShowDecisionModal((value) => !value);
+
+  const [showNoticeModal, setShowNoticeModal] = useState(false);
+  const toggleNoticeModal = () => setShowNoticeModal((value) => !value);
   return (
     <div className="App bg-black-10  lg:grid lg:grid-cols-5">
       <NavVerticalDesktop />
@@ -131,38 +145,21 @@ function App() {
         <h2>Modals & toasts</h2>
         <hr className="border-black-20 mb-6" />
         <div className="lg:grid lg:grid-cols-3 lg:gap-4 lg:justify-center lg:items-center mb-12">
-          <div className="bg-black-00  grid grid-cols-4 rounded-lg border border-black-00 shadow-md my-4 lg:my-0">
-            <div className="col-span-3 p-6 pr-4">
-              <h4>¡Cuidado!</h4>
-              <p className="text-black-60 mt-2 text-sm">
-                Estás a punto de rescindir tu postulación. Esto se puede
-                revertir únicamente si vuelves a postular el proyecto.
-              </p>
-            </div>
-            <div className="flex flex-col justify-between text-sm">
-              <button className="w-full h-full border-b border-l border-black-15 hover:bg-red-60 rounded-tr-lg">
-                <a
-                  href="#"
-                  className="no-underline text-red-60 hover:text-black-00"
-                >
-                  Rescindir
-                </a>
-              </button>
-              <button className="w-full h-full border-l border-black-15 hover:bg-black-50 rounded-br-lg">
-                <a
-                  href="#"
-                  className="no-underline text-black-50 hover:text-black-00"
-                >
-                  Cancelar
-                </a>
-              </button>
-            </div>
-          </div>
-          <div className="bg-black-00 rounded-lg border border-black-00 shadow-md p-6 my-4 lg:my-0">
-            <div className="flex  items-center">
-              <Info className="text-blue-50 mr-2" />
-              <h4>Presupuesto total</h4>
-            </div>
+          <Button primary onClick={toggleModal}>
+            Modal con decisiones
+          </Button>
+          <DecisionModal
+            show={showDecisionModal}
+            onAcceptClick={toggleModal}
+            onDeclineClick={toggleModal}
+            acceptLabel={"Rescindir"}
+            declineLabel={"Aceptar"}
+            title={"¡Cuidado!"}
+            description={
+              "Estás a punto de rescindir tu postulación. Esto se puede revertir únicamente si vuelves a postular el proyecto."
+            }
+          />
+          <Toast title="Presupuesto total" icon={Info}>
             <p className="text-black-60 mt-4 text-sm">
               Para el proyecto{" "}
               <span className="font-semibold text-blue-50">
@@ -176,10 +173,41 @@ function App() {
               <span className="font-semibold text-blue-50">100,000 ARS</span>. A
               continuación, el detalle de cómo se asignarán esos recursos:
             </p>
-          </div>
+          </Toast>
+
+          <Button primary onClick={toggleNoticeModal}>
+            Modal de aviso
+          </Button>
+
+          <Modal show={showNoticeModal}>
+            <ModalHeader onCloseClick={toggleNoticeModal}>
+              <Breadcrumbs
+                links={[
+                  { href: "#", title: "Cooperativa la Hermandad" },
+                  { href: "#", title: "Guía de agricultura Solarpunk 2022" },
+                ]}
+              />
+            </ModalHeader>
+            <ModalBody buttonText={"Cerrar"} onButtonClick={toggleNoticeModal}>
+              <h2>Denunciar irregularidad</h2>
+              <div>
+                <h3>¡Gracias!</h3>
+                <p className="mt-2 mb-4">
+                  Tu reporte será evaluado. Estaremos en contacto contigo a la
+                  brevedad.
+                </p>
+              </div>
+            </ModalBody>
+          </Modal>
+
           <div className="bg-black-00 rounded-2xl border border-black-00 shadow-md p-6 col-span-2">
             <div className="flex justify-between flex-col-reverse lg:flex-row gap-2">
-              <Breadcrumbs />
+              <Breadcrumbs
+                links={[
+                  { href: "#", title: "Cooperativa la Hermandad" },
+                  { href: "#", title: "Guía de agricultura Solarpunk 2022" },
+                ]}
+              />
               <X className="w-6 text-black-60" />
             </div>
             <hr className="border-black-20 my-2" />
@@ -191,6 +219,8 @@ function App() {
                   Tu reporte será evaluado. Estaremos en contacto contigo a la
                   brevedad.
                 </p>
+              </div>
+              <div>
                 <button className="primaryButton">Cerrar</button>
               </div>
             </div>
