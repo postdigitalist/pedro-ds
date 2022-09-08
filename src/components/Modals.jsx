@@ -46,19 +46,29 @@ const DecisionModal = ({
   }
 };
 
-const Modal = ({ children }) => {
-  return (
-    <div className="bg-black-00 rounded-2xl border border-black-00 shadow-md p-6 col-span-2">
-      {children}
-    </div>
-  );
+const Modal = ({ children, show }) => {
+  if (show) {
+    return (
+      <div className="fixed w-full  h-full z-50 top-0 left-0 flex items-center justify-center">
+        <div className="absolute w-full h-full bg-black-70 opacity-50"></div>
+        <div className="p-4 w-full max-w-2xl h-full md:h-auto z-40">
+          <div className="bg-black-00 rounded-2xl border border-black-00 shadow-md p-6 col-span-2">
+            {children}
+          </div>
+        </div>
+      </div>
+    );
+  }
 };
 const ModalHeader = ({ children, onCloseClick }) => {
   return (
     <>
       <div className="flex justify-between flex-col-reverse lg:flex-row gap-2">
         {children}
-        <X onClick={onCloseClick} className="w-6 text-black-60" />
+        <X
+          onClick={onCloseClick}
+          className="w-6 text-black-60 cursor-pointer hover:bg-black-30 hover:rounded-lg"
+        />
       </div>
 
       <hr className="border-black-20 my-2" />
