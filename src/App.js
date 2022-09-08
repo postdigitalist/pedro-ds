@@ -9,13 +9,17 @@ import {
   GenericWheel,
 } from "./components/Loaders";
 import Dropdown from "./components/Dropdown";
-import NavHorizontal from "./components/NavHorizontal";
+import {
+  _NavHorizontal,
+  NavHorizontal,
+  NavHorizontalMenu,
+  NavHorizontalMenuItem,
+} from "./components/NavHorizontal";
 import {
   NavVerticalDesktop,
   NavVerticalMobile,
 } from "./components/NavVertical";
 import { RadioField, CheckboxField } from "./components/RadiosCheckboxes";
-import Button from "./components/Button";
 import Link from "./components/Link";
 import Tag from "./components/Tag";
 import {
@@ -26,6 +30,7 @@ import {
 } from "./components/Modals";
 import { useState } from "react";
 import Toast from "./components/Toast";
+import Button from "./components/Button";
 function App() {
   const [showDecisionModal, setShowDecisionModal] = useState(false);
   const toggleModal = () => setShowDecisionModal((value) => !value);
@@ -37,44 +42,70 @@ function App() {
       <NavVerticalDesktop />
       <NavVerticalMobile />
       <div className="lg:col-span-4 lg:px-16 px-6">
-        <NavHorizontal />
+        <NavHorizontal logoUrl={"logo.png"}>
+          <NavHorizontalMenu>
+            <NavHorizontalMenuItem>
+              <Link noUnderline href={"#"}>
+                Inicio
+              </Link>
+            </NavHorizontalMenuItem>
+            <NavHorizontalMenuItem>
+              <Link noUnderline href={"#"}>
+                Preguntas Frecuentes
+              </Link>
+            </NavHorizontalMenuItem>
+            <NavHorizontalMenuItem>
+              <Link noUnderline href={"#"}>
+                <Button primary>Home</Button>
+              </Link>
+            </NavHorizontalMenuItem>
+          </NavHorizontalMenu>
+        </NavHorizontal>
         <h1>Librería de componentes</h1>
         <h2>Botones</h2>
         <hr className="border-black-20 mb-6" />
-        <div className="lg:grid lg:grid-cols-3 lg:gap-4 lg:justify-center lg:items-center mb-12">
-          <Button primary>Comienza ahora</Button>
-          <Button primary small>
+        <div className="lg:grid lg:grid-cols-3 gap-4 lg:justify-center lg:items-center mb-12">
+          <Link primary>Comienza ahora</Link>
+          <Link primary small>
             Postula un nuevo proyecto
-          </Button>
-          <Button primary small icon={PlusCircle}>
+          </Link>
+          <Link primary small icon={PlusCircle}>
             Postula un nuevo proyecto
-          </Button>
-          <Button secondary>Revisa la documentación</Button>
-          <Button secondary small>
+          </Link>
+          <Link secondary>Revisa la documentación</Link>
+          <Link secondary small>
             Invita a tus amigues
-          </Button>
-          <Button secondary small icon={Trash}>
+          </Link>
+          <Link secondary small icon={Trash}>
             Elimina el borrador
-          </Button>
-
-          <Link href="#">Comienza ahora</Link>
-          <Link noUnderline href="#">
-            Aprende más <span className="text-sm">↗</span>
-          </Link>
-          <Link noUnderline href="#">
-            Volver
           </Link>
 
-          <Button secondary square icon={MoreHorizontal} />
-          <Button primary square icon={MoreHorizontal} />
+          <p>
+            <Link href="#">Comienza ahora</Link>
+          </p>
+          <p>
+            <Link noUnderline href="#">
+              {" "}
+              Aprende más <span className="text-sm">↗</span>{" "}
+            </Link>
+          </p>
+          <p>
+            <Link noUnderline href="#">
+              {" "}
+              Volver{" "}
+            </Link>
+          </p>
 
-          <Button secondary disabled>
+          <Link secondary square icon={MoreHorizontal} />
+          <Link primary square icon={MoreHorizontal} />
+
+          <Link secondary disabled>
             Revisa la documentación
-          </Button>
-          <Button primary disabled>
+          </Link>
+          <Link primary disabled>
             Comienza ahora
-          </Button>
-          <Button primary square disabled icon={MoreHorizontal} />
+          </Link>
+          <Link primary square disabled icon={MoreHorizontal} />
         </div>
         <h2>Tags</h2>
         <hr className="border-black-20 mb-6" />
@@ -145,9 +176,9 @@ function App() {
         <hr className="border-black-20 mb-6" />
         <div className="lg:grid lg:grid-cols-3 lg:gap-4 lg:justify-center lg:items-center mb-12">
           <div>
-            <Button primary onClick={toggleModal}>
+            <Link primary onClick={toggleModal}>
               Modal de decisión
-            </Button>
+            </Link>
             <DecisionModal
               show={showDecisionModal}
               onAcceptClick={toggleModal}
@@ -162,9 +193,9 @@ function App() {
           </div>
 
           <div>
-            <Button primary onClick={toggleNoticeModal}>
+            <Link primary onClick={toggleNoticeModal}>
               Modal de aviso
-            </Button>
+            </Link>
 
             <Modal show={showNoticeModal}>
               <ModalHeader onCloseClick={toggleNoticeModal}>

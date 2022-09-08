@@ -1,5 +1,25 @@
 import React from "react";
-const NavHorizontal = (props) => {
+
+const NavHorizontalMenuItem = ({ children }) => {
+  return <li className="border-0 py-1">{children}</li>;
+};
+const NavHorizontalMenu = ({ children }) => {
+  return (
+    <ul className="md:flex md:justify-between md:items-center list-none gap-4">
+      {children}
+    </ul>
+  );
+};
+
+const NavHorizontal = ({ children, logoUrl }) => {
+  return (
+    <nav className="md:flex md:justify-between md:items-center w-full  py-6 mb-6">
+      <img src={logoUrl} className="w-8" />
+      {children}
+    </nav>
+  );
+};
+const _NavHorizontal = (props) => {
   return (
     <nav className="md:flex md:justify-between md:items-center w-full  py-6 mb-6">
       <img src="logo.png" className="w-8" />
@@ -27,4 +47,9 @@ const NavHorizontal = (props) => {
   );
 };
 
-export default NavHorizontal;
+export {
+  _NavHorizontal,
+  NavHorizontal,
+  NavHorizontalMenu,
+  NavHorizontalMenuItem,
+};
