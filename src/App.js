@@ -145,87 +145,68 @@ function App() {
         <h2>Modals & toasts</h2>
         <hr className="border-black-20 mb-6" />
         <div className="lg:grid lg:grid-cols-3 lg:gap-4 lg:justify-center lg:items-center mb-12">
-          <Button primary onClick={toggleModal}>
-            Modal con decisiones
-          </Button>
-          <DecisionModal
-            show={showDecisionModal}
-            onAcceptClick={toggleModal}
-            onDeclineClick={toggleModal}
-            acceptLabel={"Rescindir"}
-            declineLabel={"Aceptar"}
-            title={"¡Cuidado!"}
-            description={
-              "Estás a punto de rescindir tu postulación. Esto se puede revertir únicamente si vuelves a postular el proyecto."
-            }
-          />
-          <Toast title="Presupuesto total" icon={Info}>
-            <p className="text-black-60 mt-4 text-sm">
-              Para el proyecto{" "}
-              <span className="font-semibold text-blue-50">
-                Guía de agricultura Solarpunk 2022
-              </span>
-              ,{" "}
-              <span className="font-semibold text-blue-50">
-                Cooperativa Hermandad
-              </span>{" "}
-              pidió{" "}
-              <span className="font-semibold text-blue-50">100,000 ARS</span>. A
-              continuación, el detalle de cómo se asignarán esos recursos:
-            </p>
-          </Toast>
+          <div>
+            <Button primary onClick={toggleModal}>
+              Modal de decisión
+            </Button>
+            <DecisionModal
+              show={showDecisionModal}
+              onAcceptClick={toggleModal}
+              onDeclineClick={toggleModal}
+              acceptLabel={"Rescindir"}
+              declineLabel={"Aceptar"}
+              title={"¡Cuidado!"}
+              description={
+                "Estás a punto de rescindir tu postulación. Esto se puede revertir únicamente si vuelves a postular el proyecto."
+              }
+            />
+          </div>
 
-          <Button primary onClick={toggleNoticeModal}>
-            Modal de aviso
-          </Button>
+          <div>
+            <Button primary onClick={toggleNoticeModal}>
+              Modal de aviso
+            </Button>
 
-          <Modal show={showNoticeModal}>
-            <ModalHeader onCloseClick={toggleNoticeModal}>
-              <Breadcrumbs
-                links={[
-                  { href: "#", title: "Cooperativa la Hermandad" },
-                  { href: "#", title: "Guía de agricultura Solarpunk 2022" },
-                ]}
-              />
-            </ModalHeader>
-            <ModalBody buttonText={"Cerrar"} onButtonClick={toggleNoticeModal}>
-              <h2>Denunciar irregularidad</h2>
-              <div>
-                <h3>¡Gracias!</h3>
-                <p className="mt-2 mb-4">
-                  Tu reporte será evaluado. Estaremos en contacto contigo a la
-                  brevedad.
-                </p>
-              </div>
-            </ModalBody>
-          </Modal>
-
-          <div className="bg-black-00 rounded-2xl border border-black-00 shadow-md p-6 col-span-2">
-            <div className="flex justify-between flex-col-reverse lg:flex-row gap-2">
-              <Breadcrumbs
-                links={[
-                  { href: "#", title: "Cooperativa la Hermandad" },
-                  { href: "#", title: "Guía de agricultura Solarpunk 2022" },
-                ]}
-              />
-              <X className="w-6 text-black-60" />
-            </div>
-            <hr className="border-black-20 my-2" />
-            <div className="mt-6">
-              <h2>Denunciar irregularidad</h2>
-              <div>
-                <h3>¡Gracias!</h3>
-                <p className="mt-2 mb-4">
-                  Tu reporte será evaluado. Estaremos en contacto contigo a la
-                  brevedad.
-                </p>
-              </div>
-              <div>
-                <button className="primaryButton">Cerrar</button>
-              </div>
-            </div>
+            <Modal show={showNoticeModal}>
+              <ModalHeader onCloseClick={toggleNoticeModal}>
+                <Breadcrumbs
+                  links={[
+                    { href: "#", title: "Cooperativa la Hermandad" },
+                    { href: "#", title: "Guía de agricultura Solarpunk 2022" },
+                  ]}
+                />
+              </ModalHeader>
+              <ModalBody
+                buttonText={"Cerrar"}
+                onButtonClick={toggleNoticeModal}
+              >
+                <h2>Denunciar irregularidad</h2>
+                <div>
+                  <h3>¡Gracias!</h3>
+                  <p className="mt-2 mb-4">
+                    Tu reporte será evaluado. Estaremos en contacto contigo a la
+                    brevedad.
+                  </p>
+                </div>
+              </ModalBody>
+            </Modal>
           </div>
         </div>
+        <Toast title="Presupuesto total" icon={Info}>
+          <p className="text-black-60 mt-4 text-sm">
+            Para el proyecto{" "}
+            <span className="font-semibold text-blue-50">
+              Guía de agricultura Solarpunk 2022
+            </span>
+            ,{" "}
+            <span className="font-semibold text-blue-50">
+              Cooperativa Hermandad
+            </span>{" "}
+            pidió{" "}
+            <span className="font-semibold text-blue-50">100,000 ARS</span>. A
+            continuación, el detalle de cómo se asignarán esos recursos:
+          </p>
+        </Toast>
         <h2>Tabs</h2>
         <hr className="border-black-20 mb-6" />
         <div className="mb-12">
@@ -286,22 +267,22 @@ function App() {
         <hr className="border-black-20 mb-6" />
         <div className="mb-12">
           <div className="mb-4">
-            <ProgressBar progress="w-full" />
+            <ProgressBar progress={100} />
           </div>
           <div className="mb-4">
-            <ProgressBar progress="w-[80%]" />
+            <ProgressBar progress={80} />
           </div>
           <div className="mb-4">
-            <ProgressBar progress="w-24" />
+            <ProgressBar progress={24} />
           </div>
           <div className="mb-4">
-            <ProgressBar progress="w-12" />
+            <ProgressBar progress={12} />
           </div>
           <div className="mb-4">
-            <ProgressBar progress="w-34" />
+            <ProgressBar progress={32} />
           </div>
           <div className="mb-4">
-            <ProgressBar progress="w-[50%]" />
+            <ProgressBar progress={50} />
           </div>
         </div>
         <h2>Indicadores de carga</h2>
