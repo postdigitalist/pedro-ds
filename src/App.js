@@ -1,5 +1,5 @@
 import { PlusCircle, Trash, MoreHorizontal, X, Info } from "react-feather";
-import { RoundedIcon, SquareIcon } from "./components/UserIcons";
+import { RoundedIcon } from "./components/UserIcons";
 import Breadcrumbs from "./components/Breadcrumbs";
 import Tabs from "./components/Tabs";
 import ProgressBar from "./components/Progress";
@@ -23,7 +23,6 @@ import {
   Modal,
   ModalBody,
   ModalHeader,
-  NoticeModal,
 } from "./components/Modals";
 import { useState } from "react";
 import Toast from "./components/Toast";

@@ -7,7 +7,7 @@ const Breadcrumbs = ({ links }) => {
   if (links.length > 1) {
     previous = links.slice(0, -1);
     last = links[links.length - 1];
-  } else if (links.length == 1) {
+  } else if (links.length === 1) {
     previous = [];
     last = links[0];
   }
