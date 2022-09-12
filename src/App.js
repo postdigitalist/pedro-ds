@@ -39,43 +39,7 @@ function App() {
       <div className="lg:col-span-4 lg:px-16 px-6">
         <NavHorizontal />
         <h1>Librería de componentes</h1>
-        <h2>Botones</h2>
-        <hr className="border-black-20 mb-6" />
-        <div className="lg:grid lg:grid-cols-3 lg:gap-4 lg:justify-center lg:items-center mb-12">
-          <Button primary>Comienza ahora</Button>
-          <Button primary small>
-            Postula un nuevo proyecto
-          </Button>
-          <Button primary small icon={PlusCircle}>
-            Postula un nuevo proyecto
-          </Button>
-          <Button secondary>Revisa la documentación</Button>
-          <Button secondary small>
-            Invita a tus amigues
-          </Button>
-          <Button secondary small icon={Trash}>
-            Elimina el borrador
-          </Button>
-
-          <Link href="#">Comienza ahora</Link>
-          <Link noUnderline href="#">
-            Aprende más <span className="text-sm">↗</span>
-          </Link>
-          <Link noUnderline href="#">
-            Volver
-          </Link>
-
-          <Button secondary square icon={MoreHorizontal} />
-          <Button primary square icon={MoreHorizontal} />
-
-          <Button secondary disabled>
-            Revisa la documentación
-          </Button>
-          <Button primary disabled>
-            Comienza ahora
-          </Button>
-          <Button primary square disabled icon={MoreHorizontal} />
-        </div>
+        
         <h2>Tags</h2>
         <hr className="border-black-20 mb-6" />
         <div className="grid grid-cols-3 gap-4 justify-center items-center mb-12">
@@ -89,19 +53,11 @@ function App() {
             Proyectos en curso
           </Tag>
         </div>
-        <h2>Imagenes de perfil</h2>
-        <hr className="border-black-20 mb-6" />
-        <div className="grid grid-cols-3 gap-4 justify-center items-center mb-12">
-          <RoundedIcon size={20} imageUrl={"https://picsum.photos/300"} />
-        </div>
+  
         <h2>Listas</h2>
         <hr className="border-black-20 mb-6" />
         <div className="grid grid-cols-2 gap-4 justify-center items-center mb-12">
-          <ul>
-            <li>Buen día</li>
-            <li>Buenas tardes</li>
-            <li>Buenas noches</li>
-          </ul>
+          
           <ol>
             <li>Buen día</li>
             <li>Buenas tardes</li>
@@ -256,41 +212,9 @@ function App() {
               Recordá completar este campo.
             </span>
           </div>
-          <RadioField label="No posee" id="RadioExample" />
-          <CheckboxField
-            label="Acepto los términos y condiciones"
-            id="CheckboxExample"
-          />
-        </div>
-        <h2>Progreso</h2>
-        <hr className="border-black-20 mb-6" />
-        <div className="mb-12">
-          <div className="mb-4">
-            <ProgressBar progress={100} />
-          </div>
-          <div className="mb-4">
-            <ProgressBar progress={80} />
-          </div>
-          <div className="mb-4">
-            <ProgressBar progress={24} />
-          </div>
-          <div className="mb-4">
-            <ProgressBar progress={12} />
-          </div>
-          <div className="mb-4">
-            <ProgressBar progress={32} />
-          </div>
-          <div className="mb-4">
-            <ProgressBar progress={50} />
-          </div>
-        </div>
-        <h2>Indicadores de carga</h2>
-        <hr className="border-black-20 mb-6" />
-        <div className="mb-12">
-          <SavingProgress content="Tu progreso se está guardando" />
-          <SavedProgress content="Tu progreso fue guardado por última vez a las 11:15" />
-          <GenericWheel />
-        </div>
+
+    
+      </div>
       </div>
     </div>
   );
