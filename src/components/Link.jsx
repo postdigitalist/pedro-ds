@@ -1,7 +1,7 @@
-const Link = ({ noUnderline, children, ...aTagProps }) => {
+const Link = ({ nounderline, children, ...aTagProps }) => {
   const noUnderlineClassName = "no-underline";
   return (
-    <a {...aTagProps} className={`${noUnderline && noUnderlineClassName}`}>
+    <a {...aTagProps} className={`${nounderline && noUnderlineClassName}`}>
       {children}
     </a>
   );
