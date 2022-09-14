@@ -1,6 +1,6 @@
 import { RadioField, CheckboxField } from "../components/RadiosCheckboxes";
 export default {
-    title: 'Form',
+    title: 'Form/Radio & Checkbox Fields',
     component: {RadioField, CheckboxField},
 }
 
@@ -18,11 +18,3 @@ CheckboxFieldExample.args ={
     id: "TerminosCondiciones",
 }
 
-export const SelectorExample = (args) => <select name="cars" id="cars">
-<option value="volvo">Volvo</option>
-<option value="saab">Saab</option>
-<option value="mercedes">Mercedes</option>
-<option value="audi">Audi</option>
-</select>
-
-export const InputExample = (args) => <input id="exampleInput" className="formInput" />

@@ -7,29 +7,14 @@ const Tabs = (props) => {
       title: "Información general",
       content: (
         <div>
-          <h1>Tab</h1>
-          <table className="m-auto">
-            <tr>
-              <th>Company</th>
-              <th>Contact</th>
-              <th>Country</th>
-            </tr>
-            <tr>
-              <td>Alfreds Futterkiste</td>
-              <td>Maria Anders</td>
-              <td>Germany</td>
-            </tr>
-            <tr>
-              <td>Centro comercial Moctezuma</td>
-              <td>Francisco Chang</td>
-              <td>Mexico</td>
-            </tr>
-          </table>
+          <h2>Tab</h2>
+        Children
         </div>
       ),
     },
-    { title: "Equipo", content: <div>equipo</div> },
-    { title: "Presupuesto", content: <div>presupuesto</div> },
+    { title: "Equipo", content: <div>
+      <h2>Equipo</h2>Children</div> },
+    { title: "Presupuesto", content: <div><h2>Presupuesto</h2>Children</div> },
   ];
 
   const selectedTabStyles =

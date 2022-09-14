@@ -1,22 +1,12 @@
-import { PlusCircle, Trash, MoreHorizontal, X, Info } from "react-feather";
-import { RoundedIcon } from "./components/UserIcons";
+import { X, Info } from "react-feather";
 import Breadcrumbs from "./components/Breadcrumbs";
 import Tabs from "./components/Tabs";
-import ProgressBar from "./components/Progress";
-import {
-  SavingProgress,
-  SavedProgress,
-  GenericWheel,
-} from "./components/Loaders";
-import Dropdown from "./components/Dropdown";
 import NavHorizontal from "./components/NavHorizontal";
 import {
   NavVerticalDesktop,
   NavVerticalMobile,
 } from "./components/NavVertical";
-import { RadioField, CheckboxField } from "./components/RadiosCheckboxes";
 import Button from "./components/Button";
-import Link from "./components/Link";
 import Tag from "./components/Tag";
 import {
   DecisionModal,
@@ -67,36 +57,9 @@ function App() {
         <h2>Tablas</h2>
         <hr className="border-black-20 mb-6" />
         <div className=" mb-12 overflow-x-auto">
-          <table>
-            <tr>
-              <th>Company</th>
-              <th>Contact</th>
-              <th>Country</th>
-            </tr>
-            <tr>
-              <td>Alfreds Futterkiste</td>
-              <td>Maria Anders</td>
-              <td>Germany</td>
-            </tr>
-            <tr>
-              <td>Centro comercial Moctezuma</td>
-              <td>Francisco Chang</td>
-              <td>Mexico</td>
-            </tr>
-          </table>
+  
         </div>
-        <h2>Dropdown</h2>
-        <hr className="border-black-20 mb-6" />
-        <div className="mb-12">
-          <Dropdown
-            title={"My Options"}
-            options={[
-              { title: "Home", url: "https://google.com" },
-              { title: "Hello, good morning", url: "https://facebook.com" },
-              { title: "Goodbye dude", url: "https://quora.com" },
-            ]}
-          />
-        </div>
+  
         <h2>Modals & toasts</h2>
         <hr className="border-black-20 mb-6" />
         <div className="lg:grid lg:grid-cols-3 lg:gap-4 lg:justify-center lg:items-center mb-12">
@@ -191,27 +154,8 @@ function App() {
         <h2>Inputs</h2>
         <hr className="border-black-20 mb-6" />
         <div className="mb-12">
-          <div className="mb-4">
-            <label htmlFor="input1" className="block mb-1  text-black-70">
-              Nombre*
-            </label>
-            <input
-              type="text"
-              className="border-2 border-black-15 text-blue-50 rounded-lg p-1 max-w-full"
-            />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="input1" className="block mb-1  text-black-70">
-              Nombre*
-            </label>
-            <input
-              type="text"
-              className="border-2 border-red-50 rounded-lg p-1 max-w-full"
-            />
-            <span className="block text-sm text-red-50 mt-1">
-              Recordá completar este campo.
-            </span>
-          </div>
+         
+          
 
     
       </div>
