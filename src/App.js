@@ -7,6 +7,7 @@ import {
   Users,
   User,
   Target,
+  Menu,
 } from "react-feather";
 import { RoundedIcon } from "./components/UserIcons";
 import Breadcrumbs from "./components/Breadcrumbs";
@@ -33,6 +34,10 @@ import {
   NavVerticalDesktopBody,
   NavVerticalDesktopMenuItem,
   NavVerticalDesktopFooter,
+  NavVerticalMobile,
+  NavVerticalMobileMenu,
+  NavVerticalMobileBody,
+  NavVerticalMobileMenuFooter,
 } from "./components/NavVertical";
 import { RadioField, CheckboxField } from "./components/RadiosCheckboxes";
 import Tag from "./components/Tag";
@@ -52,6 +57,9 @@ function App() {
 
   const [showNoticeModal, setShowNoticeModal] = useState(false);
   const toggleNoticeModal = () => setShowNoticeModal((value) => !value);
+
+  const [showMenu, setShowMenu] = useState(false);
+  const toggleMenu = () => setShowMenu((value) => !value);
   return (
     <div className="App bg-black-10 lg:grid lg:grid-cols-5">
       <NavVerticalDesktop>
@@ -82,6 +90,33 @@ function App() {
         </NavVerticalDesktopFooter>
       </NavVerticalDesktop>
       <_NavVerticalMobile />
+      <NavVerticalMobile logoUrl={"logo.png"}>
+        <NavVerticalMobileBody
+          showMenu={showMenu}
+          onToggleMenuClick={toggleMenu}
+          icon={Menu}
+        >
+          <NavVerticalMobileMenu>
+            <NavVerticalDesktopMenuItem icon={User} href="#">
+              Perfil
+            </NavVerticalDesktopMenuItem>
+            <NavVerticalDesktopMenuItem icon={User} href="#">
+              Organización
+            </NavVerticalDesktopMenuItem>
+            <NavVerticalDesktopMenuItem icon={Target} href="#">
+              Organización
+            </NavVerticalDesktopMenuItem>
+          </NavVerticalMobileMenu>
+          <NavVerticalMobileMenuFooter>
+            <Link href="#" small nounderline>
+              ¿Necesitas ayuda?
+            </Link>
+            <Link href="#" small nounderline>
+              Salir
+            </Link>
+          </NavVerticalMobileMenuFooter>
+        </NavVerticalMobileBody>
+      </NavVerticalMobile>
       <div className="lg:col-span-4 lg:px-16 px-6">
         <NavHorizontal logoUrl={"logo.png"}>
           <NavHorizontalMenu>

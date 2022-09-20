@@ -145,6 +145,46 @@ const _NavVerticalMobile = (props) => {
     </nav>
   );
 };
+const NavVerticalMobile = ({ children, logoUrl }) => {
+  return (
+    <nav className="bg-black-00 p-4 flex justify-between items-center lg:hidden">
+      <img src={logoUrl} className="w-8" />
+      {children}
+    </nav>
+  );
+};
+
+const NavVerticalMobileMenu = ({ children }) => {
+  return <ul className="lg:mt-12 flex flex-col w-56">{children}</ul>;
+};
+const NavVerticalMobileBody = ({
+  icon = Menu,
+  children,
+  showMenu,
+  onToggleMenuClick,
+}) => {
+  const Icon = icon;
+  return (
+    <div>
+      <Icon
+        className="w-6 text-black-70 hover:text-blue-50 cursor-pointer"
+        onClick={onToggleMenuClick}
+      />
+
+      <div
+        className={`${
+          !showMenu && "hidden"
+        } absolute right-4 p-6 bg-black-00 shadow-lg rounded-xl`}
+      >
+        {children}
+      </div>
+    </div>
+  );
+};
+
+const NavVerticalMobileMenuFooter = ({ children }) => {
+  return <div className="flex mt-4 justify-end  pt-2">{children}</div>;
+};
 
 export {
   _NavVerticalDesktop,
@@ -155,4 +195,8 @@ export {
   NavVerticalDesktopBody,
   NavVerticalDesktopFooter,
   _NavVerticalMobile,
+  NavVerticalMobile,
+  NavVerticalMobileMenu,
+  NavVerticalMobileMenuFooter,
+  NavVerticalMobileBody,
 };
