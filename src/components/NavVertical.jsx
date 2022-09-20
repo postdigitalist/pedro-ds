@@ -37,12 +37,62 @@ const MenuItems = (props) => {
   );
 };
 
-const NavVerticalDesktop = (props) => {
+const NavVerticalDesktopMenu = ({ children }) => {
   return (
-    <nav className="col-span-1 h-full w-[100%] py-8 bg-black-00 top-0 left-0 z-10 hidden lg:block">
-      <div className="fixed flex flex-col justify-between w-72 h-[92%]">
+    <div className="pl-8">
+      <ul className="lg:mt-12 flex flex-col w-56">{children}</ul>
+    </div>
+  );
+};
+
+const NavVerticalDesktopMenuItem = ({ children, icon, href }) => {
+  const Icon = icon;
+
+  return (
+    <li className="list-none mb-1 w-56">
+      <a
+        href={href}
+        className="no-underline text-black-70 p-3 flex items-center rounded-lg hover:text-blue-50 hover:bg-black-10"
+      >
+        <Icon className="w-4 mr-2" />
+        {children}
+      </a>
+    </li>
+  );
+};
+
+const NavVerticalDesktopBody = ({ children }) => {
+  return <div>{children}</div>;
+};
+
+const NavVerticalDesktop = ({ children }) => {
+  return (
+    <nav className=" col-span-1 h-full w-[100%] z-10 hidden lg:block">
+      <div className="fixed flex flex-col bg-black-00 py-8 justify-between max-w-72 h-[100%]">
+        {children}
+      </div>
+    </nav>
+  );
+};
+
+const NavVerticalDesktopHeader = ({ children }) => {
+  return (
+    <div className="flex items-center justify-between pl-12 pr-6">
+      {children}
+    </div>
+  );
+};
+
+const NavVerticalDesktopFooter = ({ children }) => {
+  return <div className="px-12 flex gap-4">{children}</div>;
+};
+
+const _NavVerticalDesktop = (props) => {
+  return (
+    <nav className=" col-span-1 h-full w-[100%] z-10 hidden lg:block">
+      <div className="fixed flex flex-col bg-black-00 py-8 justify-between max-w-72 h-[100%]">
         <div>
-          <div className="flex items-center justify-between pl-12">
+          <div className="flex items-center justify-between pl-12 pr-6">
             <img src="logo.png" className="w-6" />
             <RoundedIcon size={3} imageUrl="https://picsum.photos/200" />
           </div>
@@ -63,7 +113,7 @@ const NavVerticalDesktop = (props) => {
   );
 };
 
-const NavVerticalMobile = (props) => {
+const _NavVerticalMobile = (props) => {
   const [show, setShow] = useState(false);
   const onMenuToggleClick = () => {
     setShow((value) => !value);
@@ -95,4 +145,14 @@ const NavVerticalMobile = (props) => {
     </nav>
   );
 };
-export { NavVerticalDesktop, NavVerticalMobile };
+
+export {
+  _NavVerticalDesktop,
+  NavVerticalDesktop,
+  NavVerticalDesktopHeader,
+  NavVerticalDesktopMenu,
+  NavVerticalDesktopMenuItem,
+  NavVerticalDesktopBody,
+  NavVerticalDesktopFooter,
+  _NavVerticalMobile,
+};

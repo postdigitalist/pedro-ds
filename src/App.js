@@ -1,4 +1,13 @@
-import { PlusCircle, Trash, MoreHorizontal, X, Info } from "react-feather";
+import {
+  PlusCircle,
+  Trash,
+  MoreHorizontal,
+  X,
+  Info,
+  Users,
+  User,
+  Target,
+} from "react-feather";
 import { RoundedIcon } from "./components/UserIcons";
 import Breadcrumbs from "./components/Breadcrumbs";
 import Tabs from "./components/Tabs";
@@ -16,8 +25,14 @@ import {
   NavHorizontalMenuItem,
 } from "./components/NavHorizontal";
 import {
+  _NavVerticalDesktop,
   NavVerticalDesktop,
-  NavVerticalMobile,
+  _NavVerticalMobile,
+  NavVerticalDesktopHeader,
+  NavVerticalDesktopMenu,
+  NavVerticalDesktopBody,
+  NavVerticalDesktopMenuItem,
+  NavVerticalDesktopFooter,
 } from "./components/NavVertical";
 import { RadioField, CheckboxField } from "./components/RadiosCheckboxes";
 import Tag from "./components/Tag";
@@ -39,8 +54,34 @@ function App() {
   const toggleNoticeModal = () => setShowNoticeModal((value) => !value);
   return (
     <div className="App bg-black-10 lg:grid lg:grid-cols-5">
-      <NavVerticalDesktop />
-      <NavVerticalMobile />
+      <NavVerticalDesktop>
+        <NavVerticalDesktopBody>
+          <NavVerticalDesktopHeader>
+            <img src="logo.png" className="w-6" />
+            <RoundedIcon size={3} imageUrl="https://picsum.photos/200" />
+          </NavVerticalDesktopHeader>
+          <NavVerticalDesktopMenu>
+            <NavVerticalDesktopMenuItem icon={User} href="#">
+              Perfil
+            </NavVerticalDesktopMenuItem>
+            <NavVerticalDesktopMenuItem icon={User} href="#">
+              Organización
+            </NavVerticalDesktopMenuItem>
+            <NavVerticalDesktopMenuItem icon={Target} href="#">
+              Organización
+            </NavVerticalDesktopMenuItem>
+          </NavVerticalDesktopMenu>
+        </NavVerticalDesktopBody>
+        <NavVerticalDesktopFooter>
+          <Link href="#" small nounderline>
+            ¿Necesitas ayuda?
+          </Link>
+          <Link href="#" small nounderline>
+            Salir
+          </Link>
+        </NavVerticalDesktopFooter>
+      </NavVerticalDesktop>
+      <_NavVerticalMobile />
       <div className="lg:col-span-4 lg:px-16 px-6">
         <NavHorizontal logoUrl={"logo.png"}>
           <NavHorizontalMenu>
