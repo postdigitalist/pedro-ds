@@ -196,19 +196,10 @@ function App() {
             Proyectos en curso
           </Tag>
         </div>
-        <h2>Imagenes de perfil</h2>
-        <hr className="border-black-20 mb-6" />
-        <div className="grid grid-cols-3 gap-4 justify-center items-center mb-12">
-          <RoundedIcon size={20} imageUrl={"https://picsum.photos/300"} />
-        </div>
+
         <h2>Listas</h2>
         <hr className="border-black-20 mb-6" />
         <div className="grid grid-cols-2 gap-4 justify-center items-center mb-12">
-          <ul>
-            <li>Buen día</li>
-            <li>Buenas tardes</li>
-            <li>Buenas noches</li>
-          </ul>
           <ol>
             <li>Buen día</li>
             <li>Buenas tardes</li>
@@ -217,37 +208,8 @@ function App() {
         </div>
         <h2>Tablas</h2>
         <hr className="border-black-20 mb-6" />
-        <div className=" mb-12 overflow-x-auto">
-          <table>
-            <tr>
-              <th>Company</th>
-              <th>Contact</th>
-              <th>Country</th>
-            </tr>
-            <tr>
-              <td>Alfreds Futterkiste</td>
-              <td>Maria Anders</td>
-              <td>Germany</td>
-            </tr>
-            <tr>
-              <td>Centro comercial Moctezuma</td>
-              <td>Francisco Chang</td>
-              <td>Mexico</td>
-            </tr>
-          </table>
-        </div>
-        <h2>Dropdown</h2>
-        <hr className="border-black-20 mb-6" />
-        <div className="mb-12">
-          <Dropdown
-            title={"My Options"}
-            options={[
-              { title: "Home", url: "https://google.com" },
-              { title: "Hello, good morning", url: "https://facebook.com" },
-              { title: "Goodbye dude", url: "https://quora.com" },
-            ]}
-          />
-        </div>
+        <div className=" mb-12 overflow-x-auto"></div>
+
         <h2>Modals & toasts</h2>
         <hr className="border-black-20 mb-6" />
         <div className="lg:grid lg:grid-cols-3 lg:gap-4 lg:justify-center lg:items-center mb-12">
@@ -341,63 +303,7 @@ function App() {
         </div>
         <h2>Inputs</h2>
         <hr className="border-black-20 mb-6" />
-        <div className="mb-12">
-          <div className="mb-4">
-            <label htmlFor="input1" className="block mb-1  text-black-70">
-              Nombre*
-            </label>
-            <input
-              type="text"
-              className="border-2 border-black-15 text-blue-50 rounded-lg p-1 max-w-full"
-            />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="input1" className="block mb-1  text-black-70">
-              Nombre*
-            </label>
-            <input
-              type="text"
-              className="border-2 border-red-50 rounded-lg p-1 max-w-full"
-            />
-            <span className="block text-sm text-red-50 mt-1">
-              Recordá completar este campo.
-            </span>
-          </div>
-          <RadioField label="No posee" id="RadioExample" />
-          <CheckboxField
-            label="Acepto los términos y condiciones"
-            id="CheckboxExample"
-          />
-        </div>
-        <h2>Progreso</h2>
-        <hr className="border-black-20 mb-6" />
-        <div className="mb-12">
-          <div className="mb-4">
-            <ProgressBar progress={100} />
-          </div>
-          <div className="mb-4">
-            <ProgressBar progress={80} />
-          </div>
-          <div className="mb-4">
-            <ProgressBar progress={24} />
-          </div>
-          <div className="mb-4">
-            <ProgressBar progress={12} />
-          </div>
-          <div className="mb-4">
-            <ProgressBar progress={32} />
-          </div>
-          <div className="mb-4">
-            <ProgressBar progress={50} />
-          </div>
-        </div>
-        <h2>Indicadores de carga</h2>
-        <hr className="border-black-20 mb-6" />
-        <div className="mb-12">
-          <SavingProgress content="Tu progreso se está guardando" />
-          <SavedProgress content="Tu progreso fue guardado por última vez a las 11:15" />
-          <GenericWheel />
-        </div>
+        <div className="mb-12"></div>
       </div>
     </div>
   );
