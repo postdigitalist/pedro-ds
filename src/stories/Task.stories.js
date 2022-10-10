@@ -1,7 +1,7 @@
 import Task from "../components/Task";
 
 export default{
-    title: 'Task',
+    title: 'Cards/Task',
     component: Task,
 }
 

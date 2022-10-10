@@ -5,7 +5,7 @@ const NavHorizontalMenuItem = ({ children }) => {
 };
 const NavHorizontalMenu = ({ children }) => {
   return (
-    <ul className="md:flex md:justify-between md:items-center list-none gap-4">
+    <ul className="flex justify-between items-center list-none gap-4">
       {children}
     </ul>
   );
@@ -13,7 +13,7 @@ const NavHorizontalMenu = ({ children }) => {
 
 const NavHorizontal = ({ children, logoUrl }) => {
   return (
-    <nav className="md:flex md:justify-between md:items-center w-full  py-6 mb-6">
+    <nav className="flex justify-between items-center w-full py-0 lg:py-6 mb-6">
       <img src={logoUrl} className="w-8" />
       {children}
     </nav>
@@ -21,8 +21,8 @@ const NavHorizontal = ({ children, logoUrl }) => {
 };
 const _NavHorizontal = (props) => {
   return (
-    <nav className="md:flex md:justify-between md:items-center w-full  py-6 mb-6">
-      <img src="logo.png" className="w-8" />
+    <nav className="md:flex md:justify-between items-center w-full  py-0 lg:py-6 mb-6">
+      <img src="logo.png" className="md:w-8" />
       <ul className="md:flex md:justify-between md:items-center list-none">
         <li className="border-0 py-1">
           <a href="#" className="no-underline mr-4">

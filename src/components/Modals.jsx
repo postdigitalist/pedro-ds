@@ -15,7 +15,7 @@ const DecisionModal = ({
       <div className="fixed w-full  h-full z-50 top-0 left-0 flex items-center justify-center">
         <div className="absolute w-full h-full bg-black-70 opacity-50"></div>
         <div className="p-4 w-full max-w-2xl h-full md:h-auto">
-          <div className="relative bg-white rounded-lg shadow dark:bg-gray-700 bg-black-00 grid grid-cols-4 rounded-lg border border-black-00 shadow-md my-4 lg:my-0">
+          <div className="relative bg-white dark:bg-gray-700 bg-black-00 grid grid-cols-4 rounded-lg border border-black-00 shadow-md my-4 lg:my-0">
             <div className="col-span-3 p-6 pr-4">
               <h4>{title}</h4>
               <p className="text-black-60 mt-2 text-sm">{description}</p>

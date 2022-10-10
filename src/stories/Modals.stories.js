@@ -1,26 +1,44 @@
 import Breadcrumbs from "../components/Breadcrumbs";
 import { DecisionModal, Modal, ModalHeader, ModalBody} from "../components/Modals";
+import Button from "../components/Button";
+import { useState } from "react";
 
  export default{
     title: 'Cards/Modals',
     component: {DecisionModal, Modal, ModalHeader, ModalBody},
  }
 
-export const DecisionModalExample = (args) =>  <DecisionModal {...args}/>;
+export const DecisionModalExample = (args) => {
+const [showDecisionModal, setShowDecisionModal] = useState(false);
+const toggleModal = () => setShowDecisionModal((value) => !value);
+return(
+  <div>
+ <Button primary onClick={toggleModal}>
+              Modal de decisión
+            </Button>
+<DecisionModal  show={showDecisionModal}
+              onAcceptClick={toggleModal}
+              onDeclineClick={toggleModal}
+              acceptLabel={"Rescindir"}
+              declineLabel={"Aceptar"}
+              title={"¡Cuidado!"}
+              description={
+                "Estás a punto de rescindir tu postulación. Esto se puede revertir únicamente si vuelves a postular el proyecto."
+              }/>
+</div>); } 
 
- 
-DecisionModalExample.args ={
-    acceptLabel: 'Rescindir',
-    declineLabel: 'Cancelar',
-    title: 'Cuidado',
-    description: 'Estás a punto de rescindir tu postulación.'
-}
+export const NotificationModalExample = (args) =>{
+  const [showNoticeModal, setShowNoticeModal] = useState(false);
+  const toggleNoticeModal = () => setShowNoticeModal((value) => !value);
 
-export const NoticeModalExample = (args) => (
-    <div>
+ return(
+  <div>
+            <Button primary onClick={toggleNoticeModal}>
+              Modal de aviso
+            </Button>
 
-            <Modal>
-              <ModalHeader>
+            <Modal show={showNoticeModal}>
+              <ModalHeader onCloseClick={toggleNoticeModal}>
                 <Breadcrumbs
                   links={[
                     { href: "#", title: "Cooperativa la Hermandad" },
@@ -29,7 +47,9 @@ export const NoticeModalExample = (args) => (
                 />
               </ModalHeader>
               <ModalBody
-                buttonText={"Cerrar"}>
+                buttonText={"Cerrar"}
+                onButtonClick={toggleNoticeModal}
+              >
                 <h2>Denunciar irregularidad</h2>
                 <div>
                   <h3>¡Gracias!</h3>
@@ -41,4 +61,5 @@ export const NoticeModalExample = (args) => (
               </ModalBody>
             </Modal>
           </div>
-);
+ )
+}
