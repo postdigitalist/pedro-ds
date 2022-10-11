@@ -1,0 +1,47 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="Fundamentals/Tablas"/>
+
+# Tablas 
+Nuestras tablas tienen su estilo seteado por defecto en `index.css`.
+
+Sus clases son:
+
+```css
+table{
+    @apply bg-black-00 py-3 drop-shadow-md rounded-lg text-left;
+}
+tr{
+    @apply py-2 border-b border-black-20 ;
+}
+th{
+    @apply font-normal text-black-40  text-sm; 
+}
+th,td{
+    @apply px-8 py-4 min-w-fit;
+}
+td{
+    @apply text-black-60;
+}
+tr:last-of-type{
+    @apply border-none;
+}
+```
+
+## Cómo crear una tabla consistente
+
+Para crear una tabla consistente, simplemente crea una tabla. Los estilos se aplicarán por defecto (si estás usando Pedro). 
+
+### Cuándo usar tablas
+
+Básicamente, si podes mostrarlo en una planilla de Excel, es una tabla. Si no podrías mostrarlo en Excel, es un `div` con children.
+
+
+#### No uses tablas para
+
+- Estructuras generales de dashboards
+- Ordenar elementos con los que el usuario pueda interactuar.
+
+#### Usa tablas para
+
+- Mostrar información organizada sobre un tópico en particular.

@@ -1,0 +1,43 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="Fundamentals/Tipografia"/>
+
+# Inter: Nuestra fuente de elección
+
+Elegimos [Inter](https://fonts.google.com/specimen/Inter?query=inter), una fuente open source & gratuita diseñada por Rasmus Andersson. Inter es usada por algunas de las marcas de tecnología más influyentes, y hay razones claras detrás de ello:
+
+- Es versátil. Dependiendo de su contexto, puede tener connotaciones muy distintas.
+- Soporta carácteres especiales mucho mejor que otras fuentes.
+- Es altamente legible, incluso en tamaños pequeños y en blanco sobre color.
+- Es gratuita, por lo que no tendrás que preocuparte por licencias o límites de uso.
+- Es variable, por lo que puedes modificar su peso e inclinación a gusto.
+
+## Uso de la tipografía
+
+### Pesos
+
+Por defecto, **Pedro** sólo importa Inter en tres pesos:
+
+- Semibold
+- Medium
+- Regular
+
+### Responsividad
+
+Heredamos el font-sizing de Tailwind. Te recomendamos leer un poco más en su documentación:
+
+*Quizás te interese: [Font Size - Tailwind CSS](https://tailwindcss.com/docs/font-size)*
+
+### Relación con la grilla
+
+A diferencia de otros sistemas de diseño, dejamos el texto lo mejor alineado con la grilla que sea posible. No tendemos a las asimetrías ni a los juegos entre la relación del texto y su fondo. Una excepción pueden ser las páginas promocionales pero recomendamos no implementar este tipo de juegos de diseño dentro de la interfaz del dashboard, ya que pueden:
+
+- Oscurecer la interfaz
+- Causar problemas de accesibilidad y legibilidad
+- Complicar el proceso de debugging y testing de responsividad innecesariamente
+
+### Legibilidad
+
+Diseñamos **Pedro** para que sea lo más accesible posible. Pero quizás tengas algunas preguntas sobre tu aplicación específica - por ejemplo, si vas a hacer un fork y probar con otra paleta de colores o tipografía. En ese caso, te recomendamos que le eches un ojo a la sección sobre legibilidad de los **Principios de Accesibilidad** de W3C:
+
+*Quizás te interese: [Principios de accesibilidad](https://www.w3.org/WAI/fundamentals/accessibility-principles/es)*

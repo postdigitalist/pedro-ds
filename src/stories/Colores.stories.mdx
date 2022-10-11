@@ -1,0 +1,63 @@
+
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="Fundamentals/Colores"/>
+
+# Nuestra paleta de colores
+
+Tailwind viene por defecto con [22 colores, en 10 tonos cada uno](https://tailwindcss.com/docs/customizing-colors#default-color-palette)
+Pero tambien podemos persoanlizar los colores de nuestro proyecto desde `tailwind.config.js`.
+Eso es exactamente lo que hemos hecho en Pedro.
+
+## Preguntas frecuentes
+
+### ¿Puedo usar los colores que vienen en Tailwind por defecto?
+Sí, podes usar esos colores de todas maneras. Eso sí, no lo recomendamos. Mantener una paleta de colores discreta ayuda a comunicar a través
+del color, mantener consistente tu interfaz, y acompañar al usuario.
+
+
+## Colores personalizados
+
+```theme: {
+    colors: {
+      'blue-10': '#EEF3FF',
+      'blue-20': '#D1DEFF',
+      'blue-30': '#A8C0FF',      
+      'blue-40': '#G993FF',
+      'blue-50': '#3069FE',
+      'blue-60': '#1252F7',
+      'blue-70': '#1C4497',
+      'red-10': '#FDF2F2',
+      'red-20': '#F8D4D7',
+      'red-30': '#F8B0B4',      
+      'red-40': '#F57F86',
+      'red-50': '#EA3F49',
+      'red-60': '#FF000E',
+      'red-70': '#980B13',  
+      'green-10': '#E7FFEF',
+      'green-20': '#97ECB5',
+      'green-30': '#78E79F',      
+      'green-40': '#44D778',
+      'green-50': '#1ACE59',
+      'green-60': '#16B14C',
+      'green-70': '#0A973B',    
+      'orange-10': '#FFF4EF',
+      'orange-20': '#FFC8B0',
+      'orange-30': '#FFA882',      
+      'orange-40': '#EF7742',
+      'orange-50': '#F06426',
+      'orange-60': '#EC5411',
+      'orange-70': '#BF3F06',
+      'black-00': '#FAFAFA',
+      'black-10': '#F6F6F6',
+      'black-15': '#EDEDED',
+      'black-20': '#DEDEDE',
+      'black-30': '#C9C9C9',      
+      'black-40': '#A5A5A5',
+      'black-50': '#808080',
+      'black-60': '#666666',
+      'black-70': '#4D4D4D',
+      'black-80': '#333333',
+      'black-90': '#252525',
+      'black-100': '#1A1919',
+    },
