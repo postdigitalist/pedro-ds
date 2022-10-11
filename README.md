@@ -27,8 +27,8 @@ Los productos que se desarrollen con Pedro deben ser:
 - Publicamos la librería de componentes vía [Chromatic](https://chromatic.com)
 
 ## Enlaces importantes
-- [Showcase de componentes](https://www.chromatic.com/library?appId=63449c2a6e6875570f288cb5)
-- [Documentación](https://postdigitalist.notion.site/Pedro-Sistema-de-Dise-o-21d434165f224508b8ea349522a352e0)
+- [Showcase de componentes](https://www.chromatic.com/library?appId=63449c2a6e6875570f288cb5&main=%3Cmain%3E)
+- [Documentación](https://main--63449c2a6e6875570f288cb5.chromatic.com/)
 - [Repositorio de la platforma de financiamiento de RedGay]()
 
 ## FAQs
