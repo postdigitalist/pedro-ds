@@ -27,17 +27,18 @@ Los productos que se desarrollen con Pedro deben ser:
 - Publicamos la librería de componentes vía [Chromatic](https://chromatic.com)
 
 ## Enlaces importantes
-- [Showcase de componentes](https://www.chromatic.com/library?appId=63449c2a6e6875570f288cb5&main=%3Cmain%3E)
-- [Documentación](https://main--63449c2a6e6875570f288cb5.chromatic.com/)
-- [Repositorio de la platforma de financiamiento de RedGay]()
+- [Showcase de componentes](https://www.chromatic.com/library?appId=63449c2a6e6875570f288cb5)
 
 ## FAQs
 
+### ¿Puedo usar Pedro en mi proyecto?
+Sí, por supuesto. 
+
 ### ¿Cómo se corre Pedro?
 
-1. Cloná este repositorio.
-2. Abrí tu terminal y corré `npm install` para instalar las dependencias.
-3. Con las dependencias ya instaladas, ingresá al directorio del proyecto con `cd pedro-ds` y corré `npm start storybook`.
+1. Instalá Pedro con `npm i pedro-ds`
+2. Importá el componente que quieras, donde quieras, como lo harías con 
+cualquier otro paquete. Es decir, `import [componente] from pedro-ds` 
 ### ¿Cómo contribuir?
 
 1. Crea un issue en [el repositorio de Github de **Pedro**](https://github.com/postdigitalist/pedro-ds). 
