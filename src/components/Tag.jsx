@@ -1,3 +1,4 @@
+import React from "react";
 const Tag = ({ icon, color = "gray", children }) => {
   const Icon = icon;
   const capitalizedColor = color[0].toUpperCase() + color.slice(1);

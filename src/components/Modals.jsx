@@ -1,3 +1,4 @@
+import React from "react";
 import { X } from "react-feather";
 import Button from "./Button";
 
